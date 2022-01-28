@@ -81,7 +81,7 @@ public class Tools {
 
         taxArrayList = new ArrayList<>();
         //zmieniłem Comparator na comparable bo nie potrzebuje zbadać kilka wartości tylko starczy mi jedna
-        Collections.sort(taxArrayList);
+        //Collections.sort(taxArrayList);
         return taxArrayList;
     }
 
@@ -141,7 +141,8 @@ public class Tools {
             System.out.println(taxResponse.getRates().keySet());
         }
     }
-        return taxResponse.getRates().get(input);
+        return null;
+        //return taxResponse.getRates().get(input);
 }
 
 

@@ -4,13 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 
-public class CountryTax extends ArrayList<TaxResponse> implements Comparable <CountryTax> {
+public class CountryTax extends ArrayList<TaxResponse> {
 
     String country;
     @JsonProperty(value = "standard_rate")
-    Double standardRate;
+    Object standardRate;
     @JsonProperty(value = "reduced_rate")
-    String reducedRate;
+    Object reducedRate;
 
     public CountryTax(){
     }
@@ -24,19 +24,19 @@ public class CountryTax extends ArrayList<TaxResponse> implements Comparable <Co
         this.country = country;
     }
 
-    public double getStandardRate() {
+    public Object getStandardRate() {
         return standardRate;
     }
 
-    public void setStandardRate(Double standardRate) {
+    public void setStandardRate(Object standardRate) {
         this.standardRate = standardRate;
     }
 
-    public String getReducedRate() {
+    public Object getReducedRate() {
         return reducedRate;
     }
 
-    public void setReducedRate(String reducedRate) {
+    public void setReducedRate(Object reducedRate) {
         this.reducedRate = reducedRate;
     }
 
@@ -52,8 +52,4 @@ public class CountryTax extends ArrayList<TaxResponse> implements Comparable <Co
     }
 
 
-    @Override
-    public int compareTo(CountryTax countryTax) {
-        return (int) (this.standardRate - countryTax.getStandardRate());
-    }
 }

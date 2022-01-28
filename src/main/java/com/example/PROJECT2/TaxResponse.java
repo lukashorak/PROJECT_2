@@ -10,7 +10,7 @@ public class TaxResponse {
     @JsonProperty(value = "last_updated")
     private String lastUpdated;
     private String disclaimer;
-    private Map<String, CountryTax> rates = new HashMap<>();
+    private Map<String, Object> rates = new HashMap<>();
 
     public String getLastUpdated() {
         return lastUpdated;
@@ -28,11 +28,11 @@ public class TaxResponse {
         this.disclaimer = disclaimer;
     }
 
-    public Map<String, CountryTax> getRates() {
+    public Map<String, Object> getRates() {
         return rates;
     }
 
-    public void setRates(Map<String, CountryTax> rates) {
+    public void setRates(Map<String, Object> rates) {
         this.rates = rates;
     }
 
